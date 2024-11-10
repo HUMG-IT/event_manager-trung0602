@@ -100,7 +100,7 @@ class EventModel {
   }
 }
 
-extension ExtEventModel on EventModel {
+extension ExEventModel on EventModel {
   String get formatedStartTimeString =>
       '${startTime.hour}:${startTime.minute}, ${startTime.day}/${startTime.month}/${startTime.year}';
   String get formatedEndTimeString =>

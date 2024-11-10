@@ -1,5 +1,5 @@
 {
-    "appTitle": "Quản lý sự kiện",
-    "addEvent": "Thêm sự kiện",
-    "eventDetails": "Chi tiết sự kiện"
+    "appTitle": "MainApp khởi chạy và hiển thị EventView",
+    "addEvent": "Them su kien",
+    "eventDetail": "Chi tiet su kien"
 }

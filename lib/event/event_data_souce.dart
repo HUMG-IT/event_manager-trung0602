@@ -1,21 +1,22 @@
-import 'dart:ui';
-
 import 'package:event_manager/event/event_model.dart';
+import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-class EventDataSource extends CalendarDataSource {
-  EventDataSource(List<EventModel> source) {
+//DataSource: Tham khảo thư viện syncFusion_calendar tại https://pub.dev
+class EventDataSouce extends CalendarDataSource {
+  EventDataSouce(List<EventModel> source){
     appointments = source;
+
   }
 
   @override
-  DateTime getStartTime(int index) {
+  DateTime getStartTime(int index){
     EventModel item = appointments!.elementAt(index);
     return item.startTime;
   }
 
   @override
-  DateTime getEndTime(int index) {
+  DateTime getEndTime(int index){
     EventModel item = appointments!.elementAt(index);
     return item.endTime;
   }
@@ -39,13 +40,13 @@ class EventDataSource extends CalendarDataSource {
   }
 
   @override
-  String? getRecurrenceRule(int index) {
+  String? getRecurrenceRule (int index) {
     EventModel item = appointments!.elementAt(index);
     return item.recurrenceRule;
   }
 
   @override
-  Color getColor(int index) {
+  Color getColor(int index){
     EventModel item = appointments!.elementAt(index);
     return item.isAllDay ? const Color(0xFF0F8644) : super.getColor(index);
   }
