@@ -12,14 +12,18 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(localizationsDelegates: [
-      AppLocalizations.delegate,
-      GlobalMaterialLocalizations.delegate,
-      GlobalWidgetsLocalizations.delegate,
-      GlobalCupertinoLocalizations.delegate,
-    ], supportedLocales: [
-      Locale('en'),
-      Locale('vi'),
-    ], locale: Locale('vi'), home: EventView());
+    return const MaterialApp(
+        localizationsDelegates: [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate
+        ],
+        supportedLocales: [
+          Locale('en'),
+          Locale('vi'),
+        ],
+        locale: Locale('vi'), //Ngôn ngữ mặc định
+        home: EventView());
   }
 }
